@@ -4,7 +4,7 @@ import graphics.Display;
 
 import java.awt.*;
 
-public class MainProgram {
+    public class MainProgram {
 
                 //Attribute
 
