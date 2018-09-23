@@ -6,13 +6,14 @@ import graphics.interfaces.ManagementObject;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 
-    public class GameManager implements ManagementObject {
+public class GameManager implements ManagementObject {
 
                 //Attribute
 
                 //Referenzen
             private Display display;
             private GameClient client;
+
 
         public GameManager(Display display, GameClient client) {
 
