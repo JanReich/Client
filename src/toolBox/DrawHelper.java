@@ -1,5 +1,7 @@
 package toolBox;
 
+import javafx.scene.image.Image;
+
 import java.awt.*;
 import java.awt.image.BufferedImage;
 

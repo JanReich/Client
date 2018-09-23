@@ -30,9 +30,10 @@ import abitur.netz.Client;
         @Override
         public void processMessage(String pMessage) {
 
-            if(pMessage.equalsIgnoreCase("RegisterSuccessful:")) {
+            if(pMessage.startsWith("RegisterSuccessful: ")) {
 
-                menu.startGame();
+                String[] tokens = pMessage.split(": ");
+                menu.startGame(Integer.parseInt(tokens[1]));
             }
 
                 //Disconnect from Server
