@@ -22,6 +22,7 @@ public class GameManager implements ManagementObject {
             this.display = display;
 
             this.clientID = clientID;
+            System.out.println(clientID);
         }
 
         @Override
