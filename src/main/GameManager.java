@@ -6,7 +6,7 @@ import graphics.interfaces.ManagementObject;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 
-public class GameManager implements ManagementObject {
+    public class GameManager implements ManagementObject {
 
                 //Attribute
             private int clientID;
@@ -22,6 +22,9 @@ public class GameManager implements ManagementObject {
             this.display = display;
 
             this.clientID = clientID;
+
+            ReadyButton button = new ReadyButton(100,100);
+            display.getActivePanel().drawObjectOnPanel(button);
         }
 
         @Override
