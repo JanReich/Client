@@ -28,8 +28,6 @@ import java.io.PrintWriter;
 import java.net.Socket;
 
 public class Connection
-
-    //Jan stinkt aus dem Mund wie ne Kuh ausm Arsch!
 {
     private Socket socket;
     private BufferedReader fromServer;
