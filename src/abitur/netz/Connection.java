@@ -28,7 +28,7 @@ import java.io.PrintWriter;
 import java.net.Socket;
 
 public class Connection
-    
+
     //Fick dich Git
 {
     private Socket socket;
