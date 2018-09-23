@@ -28,6 +28,8 @@ import java.io.PrintWriter;
 import java.net.Socket;
 
 public class Connection
+
+    //Hallo ich bin eine unnötige Zeile
 {
 
     private Socket socket;
