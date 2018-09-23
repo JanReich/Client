@@ -29,7 +29,7 @@ import java.net.Socket;
 
 public class Connection
 {
-    //Penisse sind penissig!
+
     private Socket socket;
     private BufferedReader fromServer;
     private PrintWriter toServer;
