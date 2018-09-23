@@ -174,9 +174,9 @@ import java.awt.event.MouseEvent;
             }
         }
 
-        public void startGame() {
+        public void startGame(int clientID) {
 
-            manager = new GameManager(display, client);
+            manager = new GameManager(display, client, clientID);
             display.getActivePanel().addManagement(manager);
             display.getActivePanel().removeObjectFromPanel(this);
         }
