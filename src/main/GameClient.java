@@ -29,10 +29,9 @@ import abitur.netz.Client;
                 //Register
             if(pMessage.startsWith("RegisterSuccessful: ")) {
 
-
                 String[] tokens = pMessage.split(": ");
                 menu.startGame(Integer.parseInt(tokens[1]));
-                menu.getManager();
+                gameManager = menu.getManager();
             }
 
                 //New Player
