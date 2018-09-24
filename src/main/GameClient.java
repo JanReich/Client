@@ -79,6 +79,7 @@ import abitur.netz.Client;
 
                 int clientID = Integer.parseInt(messages[1]);
                 gameManager.removeClient(clientID);
+                System.out.println(clientID);
 
                 if(!gameManager.isGameStarted()) gameManager.removeReadybutton(clientID);
             }
