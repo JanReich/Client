@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca6dc8f6-f5a4-4280-9c98-86ceaa7d3abe" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/janre.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/GameClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/GameClient.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -18,8 +17,8 @@
       <file leaf-file-name="GameClient.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/GameClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="47" column="67" selection-start-line="47" selection-start-column="67" selection-end-line="47" selection-end-column="67" />
+            <state relative-caret-position="442">
+              <caret line="46" column="36" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -195,7 +194,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1537815886310</updated>
-      <workItem from="1537815889225" duration="888000" />
+      <workItem from="1537815889225" duration="1309000" />
     </task>
     <task id="LOCAL-00001" summary="Update: NewPlayer">
       <created>1537816002822</created>
@@ -218,11 +217,25 @@
       <option name="project" value="LOCAL" />
       <updated>1537816670780</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Update: Add next Ready button">
+      <created>1537816828309</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1537816828309</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Update: Add next Ready button">
+      <created>1537816971143</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1537816971143</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="888000" />
+    <option name="totallyTimeSpent" value="1309000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
@@ -301,8 +314,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/GameClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="47" column="67" selection-start-line="47" selection-start-column="67" selection-end-line="47" selection-end-column="67" />
+        <state relative-caret-position="442">
+          <caret line="46" column="36" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
         </state>
       </provider>
     </entry>

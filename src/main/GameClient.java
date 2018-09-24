@@ -42,8 +42,7 @@ import abitur.netz.Client;
                 String username = messages[4];
                 int clientID = Integer.parseInt(messages[2]);
 
-                System.out.println();
-
+                gameManager.addOnlineClient(clientID);
                 if(!username.equalsIgnoreCase(myUsername)) {
 
                     gameManager.addReadybutton(username, clientID, false);
