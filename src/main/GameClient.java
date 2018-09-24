@@ -8,7 +8,7 @@ import abitur.netz.Client;
             private boolean spectator;
 
                 //Referenzen
-            private String username;
+            private String myUsername;
             private ConnectorMenu menu;
             private GameManager gameManager;
 
@@ -17,7 +17,7 @@ import abitur.netz.Client;
             super(pServerIP, pServerPort);
 
             this.menu = menu;
-            this.username = username;
+            this.myUsername = username;
             this.spectator = spectator;
 
             send("RegisterClient: username: " + username + ", spectator: " + spectator);
@@ -43,7 +43,12 @@ import abitur.netz.Client;
                 String username = messages[4];
                 int clientID = Integer.parseInt(messages[2]);
 
-                gameManager.addReadybutton(username, clientID);
+                System.out.println();
+
+                if(!username.equalsIgnoreCase(myUsername)) {
+
+                    gameManager.addReadybutton(username, clientID);
+                }
             }
 
 
