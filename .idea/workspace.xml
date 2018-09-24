@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a5eec7a4-d445-4ed3-971e-b49ea86bf255" name="Default Changelist" comment="Update by Jan">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/GameClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/GameClient.java" afterDir="false" />
+    <list default="true" id="a5eec7a4-d445-4ed3-971e-b49ea86bf255" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/ReadyButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ReadyButton.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -57,11 +56,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="java" value="33" />
+          <entry key="txt" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="33" />
+          <entry key="PLAIN_TEXT" value="17" />
         </counts>
       </usages-collector>
     </session>
@@ -80,8 +81,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/ReadyButton.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
-              <caret line="74" column="55" lean-forward="true" selection-start-line="74" selection-start-column="55" selection-end-line="74" selection-end-column="55" />
+            <state relative-caret-position="163">
+              <caret line="55" column="49" selection-start-line="55" selection-start-column="49" selection-end-line="55" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -89,7 +90,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/GameManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-466">
+            <state relative-caret-position="-58">
               <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -101,8 +102,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/GameClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="401">
-              <caret line="38" column="20" lean-forward="true" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
+            <state relative-caret-position="357">
+              <caret line="21" column="43" lean-forward="true" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -120,6 +121,7 @@
         <option value="$PROJECT_DIR$/src/abitur/netz/Server.java" />
         <option value="$PROJECT_DIR$/src/main/GameManager.java" />
         <option value="$PROJECT_DIR$/src/main/GameClient.java" />
+        <option value="$PROJECT_DIR$/src/main/ReadyButton.java" />
       </list>
     </option>
   </component>
@@ -389,11 +391,18 @@
       <option name="project" value="LOCAL" />
       <updated>1537708066378</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Update GameClient">
+      <created>1537815455038</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1537815455038</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7596000" />
+    <option name="totallyTimeSpent" value="7842000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -438,7 +447,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Window Title change" />
     <MESSAGE value="Update by Jan" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update by Jan" />
+    <MESSAGE value="Update GameClient" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update GameClient" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
@@ -544,14 +554,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/ReadyButton.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="74" column="55" lean-forward="true" selection-start-line="74" selection-start-column="55" selection-end-line="74" selection-end-column="55" />
+        <state relative-caret-position="163">
+          <caret line="55" column="49" selection-start-line="55" selection-start-column="49" selection-end-line="55" selection-end-column="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/GameManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
+        <state relative-caret-position="-58">
           <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -561,7 +571,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/GameClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
+        <state relative-caret-position="357">
           <caret line="21" column="43" lean-forward="true" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
         </state>
       </provider>
