@@ -64,7 +64,7 @@ public class ReadyButton implements BasicInteractableObject {
 
                 if(ready.isInside(e,x,y,width,height)){
 
-                    System.out.println("Ich bin bereit");
+                    System.out.println("Ich bin bereit !!!");
 
                 }
 
