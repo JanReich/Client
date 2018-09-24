@@ -44,6 +44,7 @@ import abitur.netz.Client;
 
                 System.out.println();
 
+                    //If-verzweigung
                 if(!username.equalsIgnoreCase(myUsername)) {
 
                     gameManager.addReadybutton(username, clientID);
