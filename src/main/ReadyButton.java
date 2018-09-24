@@ -21,9 +21,10 @@ public class ReadyButton implements BasicInteractableObject {
             private boolean active;
 
                 //Referenzen
+            private String username;
             private BufferedImage image;
 
-        public ReadyButton(int x, int y, int width, int height, boolean active) {
+        public ReadyButton(String username, int x, int y, int width, int height, boolean active) {
 
             this.x = x;
             this.y = y;
@@ -31,6 +32,7 @@ public class ReadyButton implements BasicInteractableObject {
             this.height = height;
 
             this.active = active;
+            this.username = username;
 
             try {
 
@@ -69,6 +71,7 @@ public class ReadyButton implements BasicInteractableObject {
         @Override
         public void draw(DrawHelper draw) {
 
+            draw.drawString("Name:" + username, x, y + 100);
             draw.drawImage(image, x, y, width, height);
         }
     }

@@ -15,15 +15,17 @@ import java.awt.event.MouseEvent;
             private Display display;
             private GameClient client;
 
+            private String username;
 
-        public GameManager(Display display, GameClient client, int clientID) {
+        public GameManager(Display display, GameClient client, String username, int clientID) {
 
             this.client = client;
             this.display = display;
 
             this.clientID = clientID;
+            this.username = username;
 
-            addReadybutton(clientID);
+            addReadybutton(username, clientID);
         }
 
         @Override
@@ -41,21 +43,21 @@ import java.awt.event.MouseEvent;
 
         }
 
-        private void addReadybutton(int clientID) {
+        private void addReadybutton(String username, int clientID) {
 
             switch (clientID) {
 
                 case 1:
 
-                    ReadyButton button1 = new ReadyButton(10,400, 200, 75 ,true);
+                    ReadyButton button1 = new ReadyButton(username,10,400, 200, 75 ,true);
                     display.getActivePanel().drawObjectOnPanel(button1);
                     break;
                 case 2:
-                    ReadyButton button2 = new ReadyButton(710,400, 200, 75 ,true);
+                    ReadyButton button2 = new ReadyButton(username,710,400, 200, 75 ,true);
                     display.getActivePanel().drawObjectOnPanel(button2);
                     break;
                 case 3:
-                    ReadyButton button3 = new ReadyButton(350,10, 200, 75 ,true);
+                    ReadyButton button3 = new ReadyButton(username, 350,10, 200, 75 ,true);
                     display.getActivePanel().drawObjectOnPanel(button3);
                     break;
             }
