@@ -10,14 +10,16 @@ import abitur.netz.Client;
                 //Referenzen
             private String username;
             private ConnectorMenu menu;
+            private GameManager gameManager;
 
-        public GameClient(ConnectorMenu menu, String pServerIP, int pServerPort, String username, boolean spectator) {
+        public GameClient(ConnectorMenu menu, String pServerIP, int pServerPort, String username, boolean spectator, GameManager gameManager) {
 
             super(pServerIP, pServerPort);
 
             this.menu = menu;
             this.username = username;
             this.spectator = spectator;
+            this.gameManager = gameManager;
 
             send("RegisterClient: username: " + username + ", spectator: " + spectator);
         }
@@ -26,6 +28,7 @@ import abitur.netz.Client;
         public void processMessage(String pMessage) {
 
             if(pMessage.startsWith("RegisterSuccessful: ")) {
+
 
                 String[] tokens = pMessage.split(": ");
                 menu.startGame(Integer.parseInt(tokens[1]));
