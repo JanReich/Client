@@ -77,10 +77,13 @@ public class GameManager implements ManagementObject {
 
                 case 1:
                     display.getActivePanel().removeObjectFromPanel(button1);
+                    break;
                 case 2:
                     display.getActivePanel().removeObjectFromPanel(button2);
+                    break;
                 case 3:
                     display.getActivePanel().removeObjectFromPanel(button3);
+                    break;
             }
         }
 

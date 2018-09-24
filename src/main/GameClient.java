@@ -63,9 +63,6 @@ import abitur.netz.Client;
                     clientID = Integer.parseInt(messages[6]);
 
                     gameManager.addReadybutton(username, clientID,false);
-                } else {
-
-                    System.out.println(messages.length);
                 }
             }
 
@@ -75,8 +72,6 @@ import abitur.netz.Client;
                 String[] messages = pMessage.split(": ");
 
                 int clientID = Integer.parseInt(messages[1]);
-
-                System.out.println(clientID);
 
                 if(!gameManager.isGameStarted()) gameManager.removeReadybutton(clientID);
             }
