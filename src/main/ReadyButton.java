@@ -1,6 +1,7 @@
 package main;
 
 import graphics.interfaces.BasicInteractableObject;
+import jdk.internal.util.xml.impl.Input;
 import toolBox.DrawHelper;
 import toolBox.Inputmanager;
 
@@ -21,19 +22,17 @@ public class ReadyButton implements BasicInteractableObject {
             private int width;
             private int height;
             private boolean active;
-            private Inputmanager ready;
 
                 //Referenzen
             private String username;
             private BufferedImage image;
 
-        public ReadyButton(String username, int x, int y, int width, int height, boolean active,Inputmanager ready) {
+        public ReadyButton(String username, int x, int y, int width, int height, boolean active) {
 
             this.x = x;
             this.y = y;
             this.width = width;
             this.height = height;
-            this.ready = ready;
 
             this.active = active;
             this.username = username;
@@ -62,7 +61,7 @@ public class ReadyButton implements BasicInteractableObject {
                 //Damit nur der eigene Button gedrückt werden kann.
             if(active) {
 
-                if(ready.isInside(e, x, y, width, height)) {
+                if(e.getX() >= x && e.getX() <= x + width && e.getY() >= y && e.getY()<= y + height) {
 
                     System.out.println("Ich bin bereit !!!");
                 }
