@@ -46,7 +46,7 @@ import abitur.netz.Client;
 
                 if(!username.equalsIgnoreCase(myUsername)) {
 
-                    gameManager.addReadybutton(username, clientID);
+                    gameManager.addReadybutton(username, clientID, false);
                 }
             }
 
