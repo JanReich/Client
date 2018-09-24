@@ -62,14 +62,10 @@ public class ReadyButton implements BasicInteractableObject {
                 //Damit nur der eigene Button gedrückt werden kann.
             if(active) {
 
-                if(ready.isInside(e,x,y,width,height)){
+                if(ready.isInside(e, x, y, width, height)) {
 
                     System.out.println("Ich bin bereit !!!");
-
                 }
-
-
-
             }
         }
 
