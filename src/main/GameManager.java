@@ -43,7 +43,7 @@ import java.awt.event.MouseEvent;
 
         }
 
-        private void addReadybutton(String username, int clientID) {
+        public void addReadybutton(String username, int clientID) {
 
             switch (clientID) {
 

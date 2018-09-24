@@ -38,9 +38,12 @@ import abitur.netz.Client;
                 //New Player
             else if(pMessage.startsWith("NewPlayer: ")) {
 
-                String message = pMessage.replace("NewPlayer: ", "");
-                String[] messages = message.split("|");
-                username = messages[1].replace("username:", "");
+                String[] messages = pMessage.split(":");
+
+                String username = messages[4];
+                int clientID = Integer.parseInt(messages[2]);
+
+                gameManager.addReadybutton(username, clientID);
             }
 
 
