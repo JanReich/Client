@@ -1,6 +1,5 @@
 package main;
 
-import com.sun.prism.Image;
 import graphics.interfaces.BasicInteractableObject;
 import toolBox.DrawHelper;
 
