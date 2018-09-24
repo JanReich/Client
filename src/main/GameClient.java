@@ -53,6 +53,8 @@ import abitur.netz.Client;
 
                 String[] messages = pMessage.split(":");
 
+                System.out.println(messages.length);
+
                 String username = messages[4];
                 int clientID = Integer.parseInt(messages[2]);
                 gameManager.addOnlineClient(clientID);
