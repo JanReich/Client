@@ -156,7 +156,7 @@ import java.awt.event.MouseEvent;
 
                         System.out.println("Eingabe der Daten erfolgreich... Versuche Verbindung zum Server herzustellen");
 
-                        client = new GameClient(this, ipInput.getInputQuerry(), Integer.parseInt(portInput.getInputQuerry()), nameInput.getInputQuerry(), spectator,manager);
+                        client = new GameClient(this, ipInput.getInputQuerry(), Integer.parseInt(portInput.getInputQuerry()), nameInput.getInputQuerry(), spectator);
                     } else {
 
                         System.err.println("Der Username muss mindestens 3 Zeichen beinhalten...");
@@ -179,5 +179,10 @@ import java.awt.event.MouseEvent;
             manager = new GameManager(display, client, nameInput.getInputQuerry(), clientID);
             display.getActivePanel().addManagement(manager);
             display.getActivePanel().removeObjectFromPanel(this);
+        }
+
+        public GameManager getManager() {
+
+            return manager;
         }
     }

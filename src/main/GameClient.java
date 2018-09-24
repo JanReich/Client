@@ -12,14 +12,13 @@ import abitur.netz.Client;
             private ConnectorMenu menu;
             private GameManager gameManager;
 
-        public GameClient(ConnectorMenu menu, String pServerIP, int pServerPort, String username, boolean spectator, GameManager gameManager) {
+        public GameClient(ConnectorMenu menu, String pServerIP, int pServerPort, String username, boolean spectator) {
 
             super(pServerIP, pServerPort);
 
             this.menu = menu;
             this.username = username;
             this.spectator = spectator;
-            this.gameManager = gameManager;
 
             send("RegisterClient: username: " + username + ", spectator: " + spectator);
         }
@@ -33,6 +32,7 @@ import abitur.netz.Client;
 
                 String[] tokens = pMessage.split(": ");
                 menu.startGame(Integer.parseInt(tokens[1]));
+                menu.getManager();
             }
 
                 //New Player
