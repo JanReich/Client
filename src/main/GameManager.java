@@ -23,8 +23,7 @@ import java.awt.event.MouseEvent;
 
             this.clientID = clientID;
 
-            ReadyButton button = new ReadyButton(100,100);
-            display.getActivePanel().drawObjectOnPanel(button);
+            addReadybutton(clientID);
         }
 
         @Override
@@ -40,5 +39,25 @@ import java.awt.event.MouseEvent;
         @Override
         public void mouseReleased(MouseEvent e) {
 
+        }
+
+        private void addReadybutton(int clientID) {
+
+            switch (clientID) {
+
+                case 1:
+
+                    ReadyButton button1 = new ReadyButton(10,400, 200, 75 ,true);
+                    display.getActivePanel().drawObjectOnPanel(button1);
+                    break;
+                case 2:
+                    ReadyButton button2 = new ReadyButton(710,400, 200, 75 ,true);
+                    display.getActivePanel().drawObjectOnPanel(button2);
+                    break;
+                case 3:
+                    ReadyButton button3 = new ReadyButton(350,10, 200, 75 ,true);
+                    display.getActivePanel().drawObjectOnPanel(button3);
+                    break;
+            }
         }
     }

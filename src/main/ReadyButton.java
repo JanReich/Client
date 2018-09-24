@@ -16,14 +16,21 @@ public class ReadyButton implements BasicInteractableObject {
                 //Attribute
             private int x;
             private int y;
+            private int width;
+            private int height;
+            private boolean active;
 
                 //Referenzen
             private BufferedImage image;
 
-        public ReadyButton(int x, int y) {
+        public ReadyButton(int x, int y, int width, int height, boolean active) {
 
             this.x = x;
             this.y = y;
+            this.width = width;
+            this.height = height;
+
+            this.active = active;
 
             try {
 
@@ -46,6 +53,12 @@ public class ReadyButton implements BasicInteractableObject {
 
         public void mouseReleased(MouseEvent e) {
 
+
+                //Damit nur der eigene Button gedrückt werden kann.
+            if(active) {
+
+
+            }
         }
 
         @Override
@@ -56,6 +69,6 @@ public class ReadyButton implements BasicInteractableObject {
         @Override
         public void draw(DrawHelper draw) {
 
-            draw.drawImage(image, x, y);
+            draw.drawImage(image, x, y, width, height);
         }
     }

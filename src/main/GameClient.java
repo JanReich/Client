@@ -11,11 +11,6 @@ import abitur.netz.Client;
             private String username;
             private ConnectorMenu menu;
 
-
-
-        //PROTOKOLL-EINTRÄGE:
-        // RegisterClient <username> <spectator>
-
         public GameClient(ConnectorMenu menu, String pServerIP, int pServerPort, String username, boolean spectator) {
 
             super(pServerIP, pServerPort);
