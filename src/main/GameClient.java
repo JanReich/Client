@@ -49,6 +49,7 @@ import abitur.netz.Client;
                 }
             }
 
+                //Sending Data which clients are already online
             else if(pMessage.startsWith("ClientData: ")) {
 
                 String[] messages = pMessage.split(":");
@@ -69,6 +70,17 @@ import abitur.netz.Client;
 
                     System.out.println(messages.length);
                 }
+            }
+
+                //Client has disconnect from Server
+            else if(pMessage.startsWith("Client disconnected: ")) {
+
+                String[] messages = pMessage.split(": ");
+
+                int clientID = Integer.parseInt(messages[1]);
+                gameManager.removeClient(clientID);
+
+                if(!gameManager.isGameStarted()) gameManager.removeReadybutton(clientID);
             }
 
                 //Disconnect from Server

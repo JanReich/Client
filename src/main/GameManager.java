@@ -17,7 +17,8 @@ public class GameManager implements ManagementObject {
             private GameClient client;
             private ArrayList<Integer> onlineClientIDs;
 
-            private String username;
+            private String myUsername;
+            private boolean gameStarted;
 
                 //Buttons
             private ReadyButton button1;
@@ -30,7 +31,7 @@ public class GameManager implements ManagementObject {
             this.display = display;
 
             this.clientID = clientID;
-            this.username = username;
+            this.myUsername = username;
 
             onlineClientIDs = new ArrayList<>();
             addReadybutton(username, clientID, true);
@@ -92,4 +93,9 @@ public class GameManager implements ManagementObject {
                     display.getActivePanel().removeObjectFromPanel(button3);
             }
         }
+
+    public boolean isGameStarted() {
+
+        return gameStarted;
     }
+}
