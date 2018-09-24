@@ -55,7 +55,6 @@ public class ReadyButton implements BasicInteractableObject {
 
         public void mouseReleased(MouseEvent e) {
 
-
                 //Damit nur der eigene Button gedrückt werden kann.
             if(active) {
 
