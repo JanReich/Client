@@ -53,12 +53,22 @@ import abitur.netz.Client;
 
                 String[] messages = pMessage.split(":");
 
-                System.out.println(messages.length);
-
                 String username = messages[4];
                 int clientID = Integer.parseInt(messages[2]);
                 gameManager.addOnlineClient(clientID);
                 gameManager.addReadybutton(username, clientID,false);
+
+                if(messages.length >= 9) {
+
+                    username = messages[8];
+                    clientID = Integer.parseInt(messages[6]);
+
+                    gameManager.addOnlineClient(clientID);
+                    gameManager.addReadybutton(username, clientID,false);
+                } else {
+
+                    System.out.println(messages.length);
+                }
             }
 
                 //Disconnect from Server

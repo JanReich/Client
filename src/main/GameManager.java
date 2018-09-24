@@ -66,7 +66,6 @@ public class GameManager implements ManagementObject {
             switch (clientID) {
 
                 case 1:
-                    System.out.println("test");
                     button1 = new ReadyButton(username,10,400, 200, 75 , active);
                     display.getActivePanel().drawObjectOnPanel(button1);
                     break;
