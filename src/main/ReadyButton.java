@@ -10,17 +10,17 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 
 
-    public class ReadyButton implements BasicInteractableObject {
+public class ReadyButton implements BasicInteractableObject {
 
 
                 //Attribute
-            private double x;
-            private double y;
+            private int x;
+            private int y;
 
                 //Referenzen
             private BufferedImage image;
 
-        public ReadyButton(double x, double y) {
+        public ReadyButton(int x, int y) {
 
             this.x = x;
             this.y = y;
@@ -56,6 +56,6 @@ import java.io.File;
         @Override
         public void draw(DrawHelper draw) {
 
-            draw.drawImage(image, 100, 100, 300, 150);
+            draw.drawImage(image, x, y);
         }
     }
