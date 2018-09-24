@@ -51,6 +51,8 @@ import abitur.netz.Client;
                 //Sending Data which clients are already online
             else if(pMessage.startsWith("ClientData: ")) {
 
+                    //TODO: Das ganze schön programmieren nicht hardcoden...
+
                 String[] messages = pMessage.split(":");
 
                 String username = messages[4];
