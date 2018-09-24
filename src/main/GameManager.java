@@ -59,7 +59,8 @@ public class GameManager implements ManagementObject {
 
         public void removeClient(int clientID) {
 
-            if(onlineClientIDs.contains(clientID)) onlineClientIDs.remove(clientID);
+            System.out.println(onlineClientIDs);
+            //if(onlineClientIDs.contains(clientID)) onlineClientIDs.remove(clientID);
         }
 
         public void addReadybutton(String username, int clientID, boolean active) {
