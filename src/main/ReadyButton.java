@@ -71,7 +71,7 @@ public class ReadyButton implements BasicInteractableObject {
         @Override
         public void draw(DrawHelper draw) {
 
-            draw.drawString("Name:" + username, x, y + 100);
+            draw.drawString("Name: " + username.toUpperCase(), x, y + 100);
             draw.drawImage(image, x, y, width, height);
         }
     }
