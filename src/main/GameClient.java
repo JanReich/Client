@@ -42,13 +42,22 @@ import abitur.netz.Client;
                 String username = messages[4];
                 int clientID = Integer.parseInt(messages[2]);
 
-                gameManager.addOnlineClient(clientID);
                 if(!username.equalsIgnoreCase(myUsername)) {
 
+                    gameManager.addOnlineClient(clientID);
                     gameManager.addReadybutton(username, clientID, false);
                 }
             }
 
+            else if(pMessage.startsWith("ClientData: ")) {
+
+                String[] messages = pMessage.split(":");
+
+                String username = messages[4];
+                int clientID = Integer.parseInt(messages[2]);
+                gameManager.addOnlineClient(clientID);
+                gameManager.addReadybutton(username, clientID,false);
+            }
 
                 //Disconnect from Server
             else if(pMessage.startsWith("Disconnect: ")) {

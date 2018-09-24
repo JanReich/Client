@@ -32,6 +32,7 @@ public class GameManager implements ManagementObject {
             this.clientID = clientID;
             this.username = username;
 
+            onlineClientIDs = new ArrayList<>();
             addReadybutton(username, clientID, true);
         }
 
