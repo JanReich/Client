@@ -44,7 +44,6 @@ import abitur.netz.Client;
 
                 if(!username.equalsIgnoreCase(myUsername)) {
 
-                    gameManager.addOnlineClient(clientID);
                     gameManager.addReadybutton(username, clientID, false);
                 }
             }
@@ -56,7 +55,6 @@ import abitur.netz.Client;
 
                 String username = messages[4];
                 int clientID = Integer.parseInt(messages[2]);
-                gameManager.addOnlineClient(clientID);
                 gameManager.addReadybutton(username, clientID,false);
 
                 if(messages.length >= 9) {
@@ -64,7 +62,6 @@ import abitur.netz.Client;
                     username = messages[8];
                     clientID = Integer.parseInt(messages[6]);
 
-                    gameManager.addOnlineClient(clientID);
                     gameManager.addReadybutton(username, clientID,false);
                 } else {
 
@@ -78,7 +75,7 @@ import abitur.netz.Client;
                 String[] messages = pMessage.split(": ");
 
                 int clientID = Integer.parseInt(messages[1]);
-                gameManager.removeClient(clientID);
+
                 System.out.println(clientID);
 
                 if(!gameManager.isGameStarted()) gameManager.removeReadybutton(clientID);
