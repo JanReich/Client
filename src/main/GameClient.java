@@ -27,12 +27,22 @@ import abitur.netz.Client;
         @Override
         public void processMessage(String pMessage) {
 
+                //Register
             if(pMessage.startsWith("RegisterSuccessful: ")) {
 
 
                 String[] tokens = pMessage.split(": ");
                 menu.startGame(Integer.parseInt(tokens[1]));
             }
+
+                //New Player
+            else if(pMessage.startsWith("NewPlayer: ")) {
+
+                String message = pMessage.replace("NewPlayer: ", "");
+                String[] messages = message.split("|");
+                username = messages[1].replace("username:", "");
+            }
+
 
                 //Disconnect from Server
             else if(pMessage.startsWith("Disconnect: ")) {
