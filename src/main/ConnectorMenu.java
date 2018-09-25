@@ -197,7 +197,6 @@ public class ConnectorMenu implements BasicInteractableObject {
 
                     if(nameInput.getInputQuerry().length() >= 3 && nameInput.getInputQuerry() != "username:") {
 
-                        System.out.println("Eingabe der Daten erfolgreich... Versuche Verbindung zum Server herzustellen");
 
                         client = new GameClient(this, ipInput.getInputQuerry(), Integer.parseInt(portInput.getInputQuerry()), nameInput.getInputQuerry(), spectator);
                     } else {
