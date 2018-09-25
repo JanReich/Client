@@ -29,8 +29,13 @@ import abitur.netz.Client;
                 //Register
             if(pMessage.startsWith("RegisterSuccessful: ")) {
 
-                String[] tokens = pMessage.split(": ");
-                menu.startGame(Integer.parseInt(tokens[1]));
+                if(!spectator) {
+                    String[] tokens = pMessage.split(": ");
+                    menu.startGame(Integer.parseInt(tokens[1]));
+                } else {
+
+                    menu.startGame();
+                }
                 gameManager = menu.getManager();
             }
 

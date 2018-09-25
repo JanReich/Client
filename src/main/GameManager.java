@@ -22,7 +22,7 @@ import java.awt.event.MouseEvent;
                 private ReadyButton button2;
                 private ReadyButton button3;
 
-        public GameManager(Display display, GameClient client, String username, int clientID) {
+            public GameManager(Display display, GameClient client, String username, int clientID) {
 
                 this.client = client;
                 this.display = display;
@@ -32,6 +32,15 @@ import java.awt.event.MouseEvent;
 
                 addReadybutton(username, clientID, true);
             }
+
+
+        public GameManager(Display display, GameClient client, String username) {
+
+            this.client = client;
+            this.display = display;
+
+            this.myUsername = username;
+        }
 
             @Override
             public void update(double delta) {
