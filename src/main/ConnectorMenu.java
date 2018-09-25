@@ -224,6 +224,13 @@ public class ConnectorMenu implements BasicInteractableObject {
             display.getActivePanel().removeObjectFromPanel(this);
         }
 
+        public void startGame() {
+
+            manager = new GameManager(display, client, nameInput.getInputQuerry());
+            display.getActivePanel().addManagement(manager);
+            display.getActivePanel().removeObjectFromPanel(this);
+        }
+
         public GameManager getManager() {
 
             return manager;
