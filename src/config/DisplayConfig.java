@@ -5,7 +5,7 @@ import toolBox.FileHelper;
 import java.io.File;
 import java.util.HashMap;
 
-public class DisplayConfig {
+    public class DisplayConfig extends Config {
 
                 //Config-Werte
             private int width;
@@ -25,16 +25,15 @@ public class DisplayConfig {
             private boolean isCentered;
 
                 //Referenzen
-            private File file = new File("res/configs/DisplayConfig.properties");
 
 
         public DisplayConfig() {
 
-            if(FileHelper.isFileExisting(file)) setStandards();
-            readConfig();
+            super(new File("res/configs/DisplayConfig.properties"));
         }
 
-        private void readConfig() {
+        @Override
+        public void readConfig() {
 
             width = Integer.parseInt(FileHelper.getProperty(file, "width"));
             height = Integer.parseInt(FileHelper.getProperty(file, "height"));
@@ -52,7 +51,8 @@ public class DisplayConfig {
             isCentered = Boolean.parseBoolean(FileHelper.getProperty(file, "isCentered"));
         }
 
-        private void setStandards() {
+        @Override
+        public void setStandards() {
 
             if(!FileHelper.isFileExisting(file)) {
 
@@ -79,6 +79,7 @@ public class DisplayConfig {
         }
 
             //TODO: SAVE-METHODE
+        @Override
         public void save() {
 
         }

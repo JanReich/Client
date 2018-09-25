@@ -1,5 +1,6 @@
 package main;
 
+import config.ConnectionConfig;
 import graphics.Display;
 import graphics.interfaces.BasicInteractableObject;
 import toolBox.DrawHelper;
@@ -8,8 +9,9 @@ import toolBox.Inputmanager;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
+import java.io.File;
 
-    public class ConnectorMenu implements BasicInteractableObject {
+public class ConnectorMenu implements BasicInteractableObject {
 
                 //Attribute
             private boolean spectator;
@@ -18,6 +20,7 @@ import java.awt.event.MouseEvent;
             private Display display;
             private GameClient client;
             private GameManager manager;
+            private ConnectionConfig config;
 
             private Inputmanager ipInput;
             private Inputmanager portInput;
@@ -27,6 +30,7 @@ import java.awt.event.MouseEvent;
 
             this.display = display;
             this.spectator = false;
+            this.config = new ConnectionConfig(new File("res/configs/SavedConnection.properties"));
 
             this.ipInput = new Inputmanager();
             display.getActivePanel().addManagement(ipInput);
@@ -89,9 +93,17 @@ import java.awt.event.MouseEvent;
             draw.setFont(draw.createFont(Font.BOLD, 15));
             draw.drawString("Join als Spectator", display.getWidth() / 2 - 50, 463);
 
-            draw.drawRec(350, 500, 300, 100);
+            draw.drawRec(330, 500, 300, 100);
             draw.setFont(draw.createFont(Font.BOLD, 50));
-            draw.drawString("Connect", 400, 565);
+            draw.drawString("Connect", 380, 565);
+
+                //Load
+            draw.drawRec(0, 550, 300, 100);
+            draw.drawString("Load", 80, 620);
+
+                //Save
+            draw.drawRec(display.getWidth() - 300, 550, 300, 100);
+            draw.drawString("Save", display.getWidth() - 220, 620);
         }
 
         @Override
@@ -135,9 +147,40 @@ import java.awt.event.MouseEvent;
                 nameInput.setTyping(false);
             }
 
+                //Connect
             if(ipInput.isInside(event, 350, 500, 300, 100)) {
 
                 connect();
+            }
+
+                //Load
+            if(ipInput.isInside(event,0, 550, 300, 100)) {
+
+                spectator = config.isSpectator();
+                ipInput.setInputQuerry(config.getServerIP());
+                portInput.setInputQuerry(config.getServerPort() + "");
+                nameInput.setInputQuerry(config.getUsername());
+            }
+
+                //Save
+            if(ipInput.isInside(event, display.getWidth() - 300, 550, 300, 100)) {
+
+                if(ipInput.getInputQuerry() != "" && portInput.getInputQuerry() != "" && nameInput.getInputQuerry() != "") {
+
+                    if(ipInput.getInputQuerry().contains(".") || ipInput.getInputQuerry().equalsIgnoreCase("localhost")) {
+
+                        if(nameInput.getInputQuerry().length() >= 3 && nameInput.getInputQuerry() != "username:") {
+
+                            config.setSpectator(spectator);
+                            config.setServerIP(ipInput.getInputQuerry());
+                            config.setServerPort(Integer.parseInt(portInput.getInputQuerry()));
+                            config.setUsername(nameInput.getInputQuerry());
+
+                            config.save();
+
+                        } else System.err.println("Der Username muss mindestens 3 Zeichen beinhalten...");
+                    } else System.err.print("Die IP-Adresse wurde in keinem gültigem Format angegeben");
+                } else System.err.println("Die IP-Adresse und der Port, sowie der Username dürfen nicht leer bleiben...");
             }
 
             if(ipInput.isInside(event, display.getWidth() / 2 - 75, 450, 15, 15)) {
@@ -176,8 +219,13 @@ import java.awt.event.MouseEvent;
 
         public void startGame(int clientID) {
 
-            manager = new GameManager(display, client, clientID);
+            manager = new GameManager(display, client, nameInput.getInputQuerry(), clientID);
             display.getActivePanel().addManagement(manager);
             display.getActivePanel().removeObjectFromPanel(this);
+        }
+
+        public GameManager getManager() {
+
+            return manager;
         }
     }
